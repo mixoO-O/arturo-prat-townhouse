@@ -1,0 +1,42 @@
+@import '/styles/vars.scss';
+
+$first-cut: 1050px;
+$second-cut: 810px;
+$third-cut: 620px;
+
+@mixin header-base {
+  width: 100vw;
+  background-color: $secondary-light-color;
+  overflow-y: hidden;
+}
+
+.headerFull {
+  @include header-base;
+  height: 100vh;
+
+  @media screen and (max-width: $first-cut) {
+    height: 80vh;
+  }
+
+  @media screen and (max-width: $second-cut) {
+    height: 60vh;
+  }
+
+  @media screen and (max-width: $third-cut) {
+    height: 40vh;
+  }
+}
+
+.headerMid {
+  @include header-base;
+  height: 80vh;
+
+
+  @media screen and (max-width: $first-cut) {
+    height: 60vh;
+  }
+
+  @media screen and (max-width: $second-cut) {
+    height: 40vh;
+  }
+}
