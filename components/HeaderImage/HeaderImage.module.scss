@@ -7,7 +7,6 @@ $third-cut: 620px;
 @mixin header-base {
   width: 100vw;
   background-color: $secondary-light-color;
-  overflow-y: hidden;
 }
 
 .headerFull {
