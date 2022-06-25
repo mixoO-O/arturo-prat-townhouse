@@ -15,14 +15,6 @@ const items: Items[] = [
     text: 'Galería',
     link: '#galeria',
   },
-  {
-    text: 'Entorno',
-    link: '#entorno',
-  },
-  {
-    text: 'Contacto',
-    link: '#contacto',
-  },
 ]
 
 const Navbar = () => {
