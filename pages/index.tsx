@@ -6,8 +6,8 @@ const Home: NextPage = () => {
   return (
     <div>
       <HeaderImage
-        title={'Dummy Title'}
-        subtitle={'Dummy subtitle'}
+        title={'Deuman Spa'}
+        subtitle={'Inmobiliaria'}
       />
       <Navbar />
       <div id="proyecto" style={{ width: '100vw', height: '50vh', background: 'crimson'}}>
