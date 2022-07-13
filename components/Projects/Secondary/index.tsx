@@ -10,11 +10,21 @@ const Secondary = () => {
       <div className={styles.projectDescription}>
         <span>Comodidad</span>
         <ul>
-          <li><span>+</span> Solo 7 townhouse.</li>
-          <li><span>+</span> Terrazas independientes.</li>
-          <li><span>+</span> Acceso único.</li>
-          <li><span>+</span> Estacionamientos.</li>
-          <li><span>+</span> Bicicletero.</li>
+          <li>
+            <span>+</span> Solo 7 townhouse.
+          </li>
+          <li>
+            <span>+</span> Terrazas independientes.
+          </li>
+          <li>
+            <span>+</span> Acceso único.
+          </li>
+          <li>
+            <span>+</span> Estacionamientos.
+          </li>
+          <li>
+            <span>+</span> Bicicletero.
+          </li>
         </ul>
       </div>
     </div>

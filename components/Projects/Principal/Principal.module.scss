@@ -8,7 +8,7 @@
   grid-row-gap: 0px;
 
   margin-bottom: -80px;
-  border-bottom: 2px solid #FFF;
+  border-bottom: 2px solid #fff;
 
   @media screen and (max-width: $tablet-size) {
     margin-bottom: 0;
@@ -51,7 +51,7 @@
     color: $primary-dark-color;
     font-weight: 800;
   }
-  
+
   & h2 {
     font-size: 2.5rem;
     color: $title-color;
@@ -82,4 +82,3 @@
     margin-top: -20px;
   }
 }
-

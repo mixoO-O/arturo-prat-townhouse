@@ -1,7 +1,8 @@
 @import '../../styles/vars.scss';
 
 .header {
-  background: url("https://impulsapopular.com/wp-content/uploads/2021/08/4984-Pasos-para-crear-una-empresa-o-agencia-inmobiliaria-.jpg") no-repeat bottom center;
+  background: url('https://impulsapopular.com/wp-content/uploads/2021/08/4984-Pasos-para-crear-una-empresa-o-agencia-inmobiliaria-.jpg')
+    no-repeat bottom center;
   background-attachment: scroll;
   background-size: auto;
   background-attachment: fixed;
@@ -18,7 +19,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #FFF;
+    color: #fff;
 
     & h2 {
       font-size: 50px;
