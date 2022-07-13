@@ -14,14 +14,13 @@
 
 .projectImage {
   padding: 30px 0 20px 80px;
-  margin-right: -100px;
+  margin-right: -50px;
   text-align: right;
 
   & img {
     background-color: #FFF;
     padding: 10px;
     max-width: 100%;
-    height: 90%;
     border-radius: 2px;
 
     @media screen and (max-width: $mobile-size) {

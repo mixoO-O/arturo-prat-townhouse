@@ -44,6 +44,7 @@
   padding: 20px;
   padding-bottom: 60px;
   margin-left: -20px;
+  max-height: 800px;
 
   & span {
     font-size: 1.5rem;
@@ -67,6 +68,10 @@
     font-size: 17px;
     font-weight: 400;
     color: #555;
+  }
+
+  @media screen and (min-width: $desktop-size) {
+    max-height: 500px;
   }
 
   @media screen and (max-width: $tablet-size) {
