@@ -48,7 +48,7 @@
 
   & span {
     font-size: 1.5rem;
-    color: $primary-color;
+    color: $primary-dark-color;
     font-weight: 800;
   }
   
@@ -67,7 +67,7 @@
   & p {
     font-size: 17px;
     font-weight: 400;
-    color: #555;
+    color: $text-color;
   }
 
   @media screen and (min-width: $desktop-size) {

@@ -49,7 +49,7 @@
 
   & span {
     font-size: 1.5rem;
-    color: $primary-color;
+    color: $primary-dark-color;
     font-weight: 800;
   }
 
@@ -58,7 +58,7 @@
     padding-top: 20px;
 
     & li {
-      color: #555;
+      color: $text-color;
       font-size: 16px;
       display: flex;
       align-items: center;

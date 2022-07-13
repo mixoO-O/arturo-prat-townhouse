@@ -13,9 +13,11 @@ const Home: NextPage = () => (
 
     <Navbar />
 
-    <Projects />
-
     <div id='proyecto'>
+      <Projects />
+    </div>
+
+    <div>
       <Parallax />
     </div>
 

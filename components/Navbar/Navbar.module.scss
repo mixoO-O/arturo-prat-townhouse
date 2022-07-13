@@ -22,9 +22,11 @@
         padding: 10px;
         color: #FFF;
         font-weight: bold;
+        transition: all ease .4s;
 
         &:hover {
-          color: $primary-color;
+          color: $primary-dark-color;
+          text-decoration: none;
         }
       }
     }
