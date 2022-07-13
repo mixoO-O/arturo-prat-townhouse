@@ -24,6 +24,7 @@
       font-size: 50px;
       font-weight: 500;
       margin-bottom: 20px;
+      overflow: hidden;
 
       @media screen and (max-width: $mobile-size) {
         font-size: 34px;
