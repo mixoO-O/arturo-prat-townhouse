@@ -2,8 +2,10 @@ import type { NextPage } from 'next';
 import { Carousel } from 'rsuite';
 import HeaderImage from '../components/HeaderImage';
 import Navbar from '../components/Navbar';
-import 'rsuite/dist/rsuite.min.css';
+
 import Parallax from '../components/Parallax';
+import Projects from '../components/Projects';
+import 'rsuite/dist/rsuite.min.css';
 
 const Home: NextPage = () => {
   return (
@@ -13,6 +15,8 @@ const Home: NextPage = () => {
         subtitle={'Inmobiliaria'}
       />
       <Navbar />
+
+      <Projects />
 
       <div id="proyecto">
         <Parallax />
