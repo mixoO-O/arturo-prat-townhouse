@@ -1,0 +1,71 @@
+@import '../../../styles/vars.scss';
+
+.Title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-bottom: 10vh;
+  margin-top: 10vh;
+  width: 100vw;
+  max-width: 1200px;
+
+  .contentTitle {
+    padding-bottom: 10vh;
+    & span {
+      color: $primary-dark-color;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  }
+
+  .imgContent {
+    margin: 0px 10px;
+    width: 100%;
+    height: auto;
+    .contentImg {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      height: auto;
+
+      margin-bottom: 3vh;
+
+      .contentDiv {
+        height: auto;
+        width: 300px;
+
+        & img {
+          height: auto;
+          width: 300px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: $tablet-size) {
+  .Title {
+    height: auto;
+    .imgContent {
+      .contentImg {
+        display: block;
+        width: 100%;
+        margin-bottom: 0vh;
+        padding-bottom: 0vh;
+
+        .contentDiv {
+          height: auto;
+          width: 100%;
+
+          & img {
+            height: auto;
+            width: 90%;
+            margin: 5%;
+          }
+        }
+      }
+    }
+  }
+}

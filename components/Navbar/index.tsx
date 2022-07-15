@@ -1,9 +1,10 @@
 import React from 'react';
+import { Affix } from 'rsuite';
 import styles from './Navbar.module.scss';
 
 interface Items {
-  text: string,
-  link: string,
+  text: string;
+  link: string;
 }
 
 const items: Items[] = [
@@ -27,7 +28,7 @@ const items: Items[] = [
     text: 'Contacto',
     link: '#contacto',
   },
-]
+];
 
 const Navbar = () => {
   return (
