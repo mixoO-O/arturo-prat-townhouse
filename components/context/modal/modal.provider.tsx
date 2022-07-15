@@ -1,12 +1,12 @@
-import React, { FC, useContext, useEffect, useMemo, useState } from 'react';
+import React, { FC, ReactComponentElement, useContext, useEffect, useMemo, useState } from 'react';
 import { ModalProps } from 'rsuite';
-import { ModalSize } from 'rsuite/esm/Modal/Modal';
 import CenterModal from '../../Modal';
-
+import { ModalSize } from 'rsuite/esm/Modal/Modal';
 import { IOpenModal, ModalContext } from './modal.context';
 
 interface IModalProvider {
   size?: ModalSize;
+  children: React.ReactNode;
 }
 
 const ModalProvider: FC<IModalProvider> = props => {
