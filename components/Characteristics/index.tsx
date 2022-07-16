@@ -3,6 +3,18 @@ import { Carousel } from 'rsuite';
 import styles from './Characteristics.module.scss';
 import stylesProjects from '../Projects/Principal/Principal.module.scss';
 
+const listItems = [
+  'Pisos con porcelanato',
+  'Muros de hormigón visto',
+  'Ventanas de aluminio Termopanel',
+  'Cocina incorporada equipada con encimera, horno y campana',
+  'Cubiertas de cuarzo',
+  'Cerámica rectificada en baños y cocina',
+  'Instalación para lavadora y agua caliente individual con termo eléctrico',
+  'Ducha baño principal con mampara de vidrio',
+  'Baños con mueble vanitorio',
+];
+
 const Characteristics = () => {
   return (
     <div className={styles.characteristics}>
@@ -26,33 +38,11 @@ const Characteristics = () => {
         </p>
         <br />
         <ul>
-          <li>
-            <span>+</span> Pisos con porcelanato
-          </li>
-          <li>
-            <span>+</span> Muros de hormigón visto
-          </li>
-          <li>
-            <span>+</span> Ventanas de aluminio Termopanel
-          </li>
-          <li>
-            <span>+</span> Cocina incorporada equipada con encimera, horno y campana
-          </li>
-          <li>
-            <span>+</span> Cubiertas de cuarzo
-          </li>
-          <li>
-            <span>+</span> Cerámica rectificada en baños y cocina
-          </li>
-          <li>
-            <span>+</span> Instalación para lavadora y agua caliente individual con termo eléctrico
-          </li>
-          <li>
-            <span>+</span> Ducha baño principal con mampara de vidrio
-          </li>
-          <li>
-            <span>+</span> Baños con mueble vanitorio
-          </li>
+          {listItems.map((text, index) => (
+            <li key={index}>
+              <span>+</span> {text}
+            </li>
+          ))}
         </ul>
       </div>
     </div>

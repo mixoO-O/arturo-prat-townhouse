@@ -29,12 +29,12 @@ const Footer: NextPage = () => {
           <span>¿Tienes dudas?</span>
         </div>
         <div className={styles.detail}>
-          <span>INFORMACION DEL PROYECTO</span>
+          <span>INFORMACIÓN DEL PROYECTO</span>
         </div>
         <div className={styles.contentItems}>
           <Item
             icon={<LocationIcon className={styles.icon} />}
-            title='Direccion'
+            title='Dirección'
             details='Arturo Prat N° 1497 Santiago'
           />
 
@@ -42,7 +42,7 @@ const Footer: NextPage = () => {
 
           <Item
             icon={<PeoplesIcon className={styles.icon} />}
-            title='Asesoría en linea'
+            title='Asesoría en línea'
             details='lun a Vie 09:00 a 19:00, sáb a dom 11:00 a 18:00'
           />
 

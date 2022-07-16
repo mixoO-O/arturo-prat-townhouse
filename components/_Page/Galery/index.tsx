@@ -1,5 +1,4 @@
 import type { NextPage } from 'next';
-import { Carousel } from 'rsuite';
 import { useModal } from '../../context/modal/modal.provider';
 
 import styles from './Styles.module.scss';
@@ -34,7 +33,7 @@ const Galery: NextPage = () => {
     <>
       <div id='galeria' className={styles.Title}>
         <div className={styles.contentTitle}>
-          <span>GALERIA</span>
+          <span>GALERÍA</span>
         </div>
         <div className={styles.imgContent}>
           <div className={styles.contentImg}>
