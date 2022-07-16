@@ -1,12 +1,17 @@
 @import '/styles/vars.scss';
 
-.navbar {
+@mixin desktop-navbar {
   width: 100vw;
   height: 5vh;
   background-color: #ffffff5c;
   margin-top: -5vh;
 
+  & div {
+    display: none;
+  }
+
   & ul {
+    background-color: #ffffff5c;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -31,4 +36,131 @@
       }
     }
   }
+
+  & span {
+    transition: all ease .2s;
+    position: fixed;
+    top: 0;
+    height: 0;
+    overflow: hidden;
+
+    & img {
+      width: 60px;
+      height: 60px;
+      padding: 5px;
+      background-color: #FFF;
+      border-radius: 0 0 5px 5px;
+      margin-left: 20px;
+    }
+  }
+}
+
+@mixin mobile-navbar {
+  & div {
+    width: 100vw;
+    height: 5vh;
+    background-color: #FFF;
+    text-align: right;
+    padding-right: 40px;
+
+    & svg {
+      margin-top: 7px;
+      font-size: 2em;
+      cursor: pointer;
+    }
+  }
+
+  & ul {
+    transition: all ease 0.2s;
+    overflow: hidden;
+    background-color: #ffffffc4;
+
+    &:not(.displayed) {
+      height: 0;
+    }
+
+    & li {
+      height: 50px;
+      text-align: center;
+      list-style: none;
+      padding: 10px;
+
+      & a {
+        color: $title-color;
+        font-weight: bold;
+        transition: all ease 0.4s;
+
+        &:hover {
+          color: $primary-dark-color;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  & span {
+    transition: all ease .2s;
+    position: fixed;
+    top: 0;
+    height: 0;
+    overflow: hidden;
+
+    & img {
+      width: 60px;
+      height: 60px;
+      padding: 5px;
+      background-color: #FFF;
+      border-radius: 0 0 5px 5px;
+      margin-left: 20px;
+    }
+  }
+}
+
+.desktopNavbar {
+  @include desktop-navbar;
+}
+
+.desktopNavbarFixed {
+  @include desktop-navbar;
+  top: 0;
+  position: sticky;
+  margin-top: 0;
+  position: fixed;
+  background-color: #fff;
+
+  & ul {
+    background-color: #FFF;
+    li a{
+      color: $title-color;
+    }
+  }
+
+  & span {
+    height: 60px;
+  }
+}
+
+
+.mobileNavbar {
+  @include mobile-navbar;
+}
+
+.mobileNavbarFixed {
+  @include mobile-navbar;
+  background: none;
+  top: 0;
+  position: sticky;
+  margin-top: 0;
+  position: fixed;
+  background-color: #fff;
+
+  & span {
+    height: 60px;
+  }
+}
+
+ul.displayed {
+  height: 250px;
+  border-bottom: solid 1px #c1c1c138;
+  margin-bottom: 0;
 }

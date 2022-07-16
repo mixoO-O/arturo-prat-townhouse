@@ -1,41 +1,30 @@
 import type { NextPage } from 'next';
-import { Carousel } from 'rsuite';
-import HeaderImage from '../components/HeaderImage';
-import Navbar from '../components/Navbar';
+import dynamic from 'next/dynamic';
 import Parallax from '../components/Parallax';
 import Projects from '../components/Projects';
-
-import 'rsuite/dist/rsuite.min.css';
 import Galery from '../components/_Page/Galery';
 import Footer from '../components/_Page/Footer';
+import HeaderImage from '../components/HeaderImage';
+import 'rsuite/dist/rsuite.min.css';
+import { useRef } from 'react';
 
-const Home: NextPage = () => (
-  <>
-    <HeaderImage />
+const Navbar = dynamic(() => import('../components/Navbar'), {ssr:false});
 
-    <Navbar />
-    <div
-      style={{
-        display: 'flex',
+const Home: NextPage = () => {
+  const bodyRef = useRef(null);
 
-        justifyContent: 'center',
-      }}
-    >
-      <div
-        style={{
-          maxWidth: 1200,
-        }}
-      >
+  return (
+    <>
+      <HeaderImage />
+      <Navbar bodyRef={bodyRef} />
+      <div ref={bodyRef}>
         <Projects />
-
         <Parallax />
-
         <Galery />
-
         <Footer />
       </div>
-    </div>
-  </>
-);
+    </>
+  );
+};
 
 export default Home;
