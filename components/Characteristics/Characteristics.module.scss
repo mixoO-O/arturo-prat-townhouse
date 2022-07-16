@@ -1,0 +1,61 @@
+@import '../../styles/vars.scss';
+
+.characteristics {
+  display: flex;
+  flex-direction: row;
+
+  @media screen and (max-width: $tablet-size) {
+    flex-direction: column;
+  }
+
+  & div {
+    max-height: 1000px;
+    width: 50vw;
+    background-color: #FFF;
+
+    @media screen and (max-width: $tablet-size) {
+      flex-direction: column;
+      width: 100vw;
+    }
+  }
+
+  & div:nth-child(2n) {
+    margin-left: 0;
+    height: auto;
+
+    & ul {
+      list-style: none;
+      padding-top: 20px;
+  
+      & li {
+        color: $text-color;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        font-weight: 400;
+  
+        & span {
+          margin-right: 10px;
+          display: inline-block;
+          color: #555;
+          font-size: 16px;
+  
+          border: solid 1px #555;
+          border-radius: 20px;
+  
+          min-width: 25px;
+          min-height: 25px;
+          max-width: 25px;
+          max-height: 25px;
+  
+          padding-left: 6px;
+        }
+      }
+    }
+  }
+
+  & div:first-child {
+    padding-top: 20px;
+  }
+}
