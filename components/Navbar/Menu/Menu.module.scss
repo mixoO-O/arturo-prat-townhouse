@@ -1,0 +1,26 @@
+@import '/styles/vars.scss';
+
+.content {
+  margin: 20px;
+  .title {
+  }
+
+  & ul {
+    & li {
+      margin: 15px 0px;
+      font-size: x-large;
+
+      & a {
+        padding: 10px;
+        color: #000;
+        font-weight: bold;
+        transition: all ease 0.4s;
+
+        &:hover {
+          color: $primary-dark-color;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

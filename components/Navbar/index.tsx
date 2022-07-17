@@ -1,13 +1,15 @@
 import React, { useState, useEffect, MutableRefObject, useRef } from 'react';
 import MenuIcon from '@rsuite/icons/Menu';
 import styles from './Navbar.module.scss';
+import Menu from './Menu';
+import { useDrawer } from '../context/drawer/drawer.provider';
 
 interface Items {
   text: string;
   link: string;
 }
 
-const items: Items[] = [
+export const ItemsMenu: Items[] = [
   {
     text: 'Proyecto',
     link: '#proyecto',
@@ -31,10 +33,11 @@ const items: Items[] = [
 ];
 
 interface iProps {
-  bodyRef: MutableRefObject<null>
+  bodyRef: MutableRefObject<null>;
 }
 
 const Navbar = ({ bodyRef }: iProps) => {
+  const { openDrawer } = useDrawer();
   const navbarRef = useRef(null);
   const [menuDisplayed, setMenuDisplayed] = useState<boolean>(false);
   const [navbarClass, setNavbarClass] = useState<string>(styles.desktopNavbar);
@@ -46,7 +49,7 @@ const Navbar = ({ bodyRef }: iProps) => {
         setMenuDisplayed(false);
       });
     }
-  }, [bodyRef])
+  }, [bodyRef]);
 
   useEffect(() => {
     if (window) {
@@ -71,14 +74,20 @@ const Navbar = ({ bodyRef }: iProps) => {
     }
   }, [window]);
 
+  const handleMenu = () => {
+    openDrawer({
+      drawerComponent: <Menu />,
+    });
+  };
+
   return (
     <>
       <div className={navbarClass}>
         <div>
-          <MenuIcon onClick={() => setMenuDisplayed(!menuDisplayed)} />
+          <MenuIcon onClick={handleMenu} />
         </div>
         <ul className={menuDisplayed ? styles.displayed : ''}>
-          {items.map((item, index) => (
+          {ItemsMenu.map((item, index) => (
             <li key={index}>
               <a href={item.link} onClick={() => setMenuDisplayed(false)}>
                 {item.text}
