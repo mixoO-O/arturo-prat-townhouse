@@ -4,7 +4,9 @@ import AdminDrawer from '../../Drawer';
 
 import { DrawerContext, IOpenDrawer } from './drawer.context';
 
-interface IDrawerProvider {}
+interface IDrawerProvider {
+  children: JSX.Element | JSX.Element[];
+}
 
 const DrawerProvider: FC<IDrawerProvider> = props => {
   const { children } = props;
