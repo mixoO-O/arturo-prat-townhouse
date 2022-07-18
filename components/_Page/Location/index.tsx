@@ -38,7 +38,6 @@ const ITEM: IItemImg[] = [
     txt: 'Universidades ',
   },
 ];
-
 const Location: NextPage = () => {
   return (
     <>

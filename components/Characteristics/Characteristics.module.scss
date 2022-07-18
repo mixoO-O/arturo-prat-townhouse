@@ -12,7 +12,6 @@
   .car {
     width: 50vw;
     margin: 20px;
-
     & img {
       height: 70%;
     }
@@ -26,6 +25,7 @@
       font-size: 1.5rem;
       color: $primary-dark-color;
       font-weight: 800;
+
     }
 
     & h2 {
