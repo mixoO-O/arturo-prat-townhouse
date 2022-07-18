@@ -37,10 +37,10 @@ const Home: NextPage = () => {
             <Parallax />
             <Galery />
             <Location />
-            <Footer />
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
