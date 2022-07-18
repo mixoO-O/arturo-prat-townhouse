@@ -37,9 +37,8 @@ const Homes: NextPage = () => {
       <div className={styles.carousel}>
         <Carousel
           shape='bar'
-          activeKey={1}
           style={{
-            bsckgroundColor: 'red',
+            backgroundColor: 'red',
           }}
         >
           {children}
