@@ -14,7 +14,7 @@ const buttonStyle = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  backgroundColor: '#000',
+  backgroundColor: 'transparent',
   color: '#fff',
   border: 0,
   outline: 0,
@@ -35,7 +35,11 @@ const buttonStyle = {
 const AdminDrawer: React.FC<IDrawerProps> = ({ isOpen, onRequestClose, children, ...drawerProps }) => (
   <Drawer open={isOpen} onClose={onRequestClose} size='full' {...drawerProps}>
     <button type='button' onClick={onRequestClose} style={{ ...buttonStyle }}>
-      <CloseIcon />
+      <CloseIcon
+        style={{
+          fontSize: '20px',
+        }}
+      />
     </button>
     <div className='p-5 w-100'>{children}</div>
   </Drawer>

@@ -1,8 +1,25 @@
 @import '/styles/vars.scss';
 
 .content {
-  margin: 20px;
+  padding: 20px;
+  background-color: $title-color;
+  height: 100vh;
+
+  .contentImg {
+    display: flex;
+    justify-content: center;
+  }
+
   .title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    & h2 {
+      color: #fff;
+    }
+    & h1 {
+      color: #fff;
+    }
   }
 
   & ul {
@@ -12,7 +29,7 @@
 
       & a {
         padding: 10px;
-        color: #000;
+        color: #fff;
         font-weight: bold;
         transition: all ease 0.4s;
 

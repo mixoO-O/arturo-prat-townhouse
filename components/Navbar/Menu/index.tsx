@@ -13,7 +13,9 @@ const Menu = () => {
 
   return (
     <div className={styles.content}>
-      <img src='/dummies/logo2.png' />
+      <div className={styles.contentImg}>
+        <img src='/dummies/logo2.png' />
+      </div>
       <div className={styles.title}>
         <h2>TOWNHOUSE</h2>
         <h1>Arturo Prat</h1>
