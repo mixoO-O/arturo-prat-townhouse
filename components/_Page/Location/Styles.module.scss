@@ -8,11 +8,13 @@
   font-size: 2rem;
   font-weight: bold;
   padding-bottom: 5rem;
+  max-width: 1200px;
 }
 
 .content {
   display: flex;
   width: 100vw;
+  max-width: 1200px;
   flex-direction: row-reverse;
 
   .contentImg {
@@ -45,11 +47,12 @@
   .content {
     flex-direction: column;
     .contentImg {
-      width: 90%;
+      width: 100vw;
+      margin: 0px;
 
       & img {
         width: 100%;
-        height: auto;
+        height: inherit;
       }
     }
 

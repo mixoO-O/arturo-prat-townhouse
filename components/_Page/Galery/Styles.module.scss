@@ -38,7 +38,7 @@
         width: 300px;
 
         & img {
-          height: auto;
+          height: 200px;
           width: 300px;
           object-fit: cover;
           cursor: pointer;
@@ -66,9 +66,8 @@
           width: 100%;
 
           & img {
-            height: auto;
-            width: 90%;
-            margin: 5%;
+            width: 100%;
+            margin: 5% 0%;
           }
         }
       }

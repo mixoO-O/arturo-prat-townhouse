@@ -12,15 +12,27 @@ interface IItem {
   title: string;
   details: string;
   openLink?: string;
+  openEmail?: boolean;
 }
 
 const Footer: NextPage = () => {
-  const Item = ({ icon, title, details, openLink }: IItem) => (
+  const sendEmail = () => {
+    var email = 'ventas@ideuman.cl';
+    var subject = 'Departamentos';
+    var emailBody = 'Ayuda para cotizar';
+    document.location = 'mailto:' + email + '?subject=' + subject + '&body=' + emailBody;
+  };
+
+  const Item = ({ icon, title, details, openLink, openEmail = false }: IItem) => (
     <div className={styles.item}>
       <div>{icon}</div>
       <span className={styles.title}>{title}</span>
       {openLink ? (
         <div onClick={() => window.open(openLink)} className={styles.detailsLink}>
+          {details}
+        </div>
+      ) : openEmail ? (
+        <div onClick={() => sendEmail()} className={styles.detailsLink}>
           {details}
         </div>
       ) : (
@@ -46,7 +58,7 @@ const Footer: NextPage = () => {
             details='Arturo Prat N° 1497 Santiago'
           />
 
-          <Item icon={<EmailIcon className={styles.icon} />} title='Email' details='Ventas@ideuman.cl' />
+          <Item icon={<EmailIcon className={styles.icon} />} openEmail title='Email' details='Ventas@ideuman.cl' />
 
           <Item
             icon={<PeoplesIcon className={styles.icon} />}
@@ -61,7 +73,12 @@ const Footer: NextPage = () => {
             details='+569 3260 6098'
           />
 
-          <Item icon={<AdminIcon className={styles.icon} />} title='Adquitecto' details='@Cristianirarrazaval' />
+          <Item
+            icon={<AdminIcon className={styles.icon} />}
+            openLink='https://www.instagram.com/Cristianirarrazaval/'
+            title='Adquitecto'
+            details='@Cristianirarrazaval'
+          />
         </div>
       </div>
     </div>
