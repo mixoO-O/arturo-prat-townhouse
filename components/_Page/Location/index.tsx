@@ -11,7 +11,7 @@ interface IItemImg {
 const ITEM: IItemImg[] = [
   {
     img: '/carrucel/centro.jpg',
-    txt: 'Centro Comunitario de Salud ',
+    txt: 'Centro Comunitario de Salud',
   },
   {
     img: '/carrucel/colegio.jpg',
@@ -19,23 +19,23 @@ const ITEM: IItemImg[] = [
   },
   {
     img: '/carrucel/metro.jpg',
-    txt: 'Estación Matta -Línea 3',
+    txt: 'Estación Matta - Línea 3',
   },
   {
     img: '/carrucel/parque.jpg',
-    txt: 'Parque O´Higgins ',
+    txt: 'Parque O´Higgins',
   },
   {
     img: '/carrucel/parque2.jpg',
-    txt: 'Parque O´Higgins ',
+    txt: 'Parque O´Higgins',
   },
   {
     img: '/carrucel/parque3.jpg',
-    txt: 'Parque O´Higgins ',
+    txt: 'Parque O´Higgins',
   },
   {
     img: '/carrucel/universidad.jpg',
-    txt: 'Universidades ',
+    txt: 'Universidades',
   },
 ];
 const Location: NextPage = () => {
