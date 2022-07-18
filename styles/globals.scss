@@ -15,8 +15,17 @@ a {
   text-decoration: none;
 }
 
+.rs-carousel {
+  background-color: #8e8e9300 !important;
+}
+
 .rs-carousel-toolbar {
   background-color: #fff0 !important;
+}
+
+.rs-carousel-slider-after,
+.rs-carousel-slider-item {
+  background-color: #8e8e9300 !important;
 }
 
 .rs-carousel-label {
