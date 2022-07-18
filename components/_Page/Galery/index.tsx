@@ -1,16 +1,22 @@
 import type { NextPage } from 'next';
+import { useState } from 'react';
 import { useModal } from '../../context/modal/modal.provider';
 
 import styles from './Styles.module.scss';
 
 const Galery: NextPage = () => {
   const { openModal } = useModal();
+  const [tabActive, setTabActive] = useState<string>('');
 
   const handleImage = (img: string) => {
     openModal({
       size: 'lg',
       modalComponent: (
-        <div>
+        <div
+          style={{
+            margin: -20,
+          }}
+        >
           <img
             style={{
               width: '100%',
@@ -33,7 +39,7 @@ const Galery: NextPage = () => {
     <>
       <div id='galeria' className={styles.Title}>
         <div className={styles.contentTitle}>
-          <span>GALERÍA</span>
+          <span>Galería</span>
         </div>
         <div className={styles.imgContent}>
           <div className={styles.contentImg}>

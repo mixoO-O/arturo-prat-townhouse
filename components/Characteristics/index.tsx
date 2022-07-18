@@ -27,7 +27,7 @@ const Characteristics = () => {
             <img src='/galery/2.png' />
           </Carousel>
         </div>
-        <div className={stylesProjects.projectDescription}>
+        <div className={styles.contentText}>
           <span>Características</span>
           <h2>Exclusividad y Diseño</h2>
           <p>

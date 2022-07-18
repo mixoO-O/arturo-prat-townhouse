@@ -1,21 +1,11 @@
 @import '../../../styles/vars.scss';
 
-.title {
-  display: flex;
-  width: 100vw;
-  justify-content: center;
-  color: $primary-dark-color;
-  font-size: 2rem;
-  font-weight: bold;
-  padding-bottom: 5rem;
-  max-width: 1200px;
-}
-
 .content {
   display: flex;
   width: 100vw;
   max-width: 1200px;
   flex-direction: row-reverse;
+  margin-top: 50px;
 
   .contentImg {
     width: 50vw;
@@ -30,9 +20,22 @@
     width: 50vw;
     margin: 20px;
 
-    & h3 {
+    & span {
+      font-size: 1.5rem;
       color: $primary-dark-color;
-      padding-bottom: 2rem;
+      font-weight: 800;
+    }
+
+    & h2 {
+      font-size: 2.5rem;
+      color: $title-color;
+      font-weight: 400;
+      margin-bottom: 40px;
+
+      @media screen and (max-width: $tablet-size) {
+        font-size: 34px;
+        margin-bottom: 21px;
+      }
     }
 
     & p {
@@ -46,6 +49,8 @@
 @media screen and (max-width: $tablet-size) {
   .content {
     flex-direction: column;
+    margin-top: 20px;
+
     .contentImg {
       width: 100vw;
       margin: 0px;
