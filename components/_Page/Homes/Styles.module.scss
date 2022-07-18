@@ -36,7 +36,10 @@
       max-width: 1200px;
 
       .titleHouse {
-        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 30vw;
         margin: 20px;
         & span {
           color: $primary-dark-color;
@@ -53,7 +56,7 @@
       }
 
       .carousel {
-        width: 50vw;
+        width: 70vw;
         margin: 20px;
       }
     }

@@ -35,7 +35,9 @@ const Homes: NextPage = () => {
         ))}
       </div>
       <div className={styles.carousel}>
-        <Carousel autoplay>{children}</Carousel>
+        <Carousel autoplay shape='bar'>
+          {children}
+        </Carousel>
       </div>
     </div>
   );
@@ -57,26 +59,24 @@ const Homes: NextPage = () => {
         <div className={styles.imgContent}>
           {tabActive === 'casaA' && (
             <ItemHouse title='Casa A' details={CASAA}>
-              <img src='/galery/1.png' />
-              <img src='/galery/1.png' />
-              <img src='/galery/1.png' />
-              <img src='/galery/1.png' />
+              <img src='/houses/casaA/1.png' />
+              <img src='/houses/casaA/2.png' />
+              <img src='/houses/casaA/3.png' />
+              <img src='/houses/casaA/4.png' />
             </ItemHouse>
           )}
           {tabActive === 'casaB' && (
             <ItemHouse title='Casa B' details={CASAB}>
-              <img src='/galery/1.png' />
-              <img src='/galery/1.png' />
-              <img src='/galery/1.png' />
-              <img src='/galery/1.png' />
+              <img src='/houses/casaB/2.png' />
+              <img src='/houses/casaB/3.png' />
+              <img src='/houses/casaB/4.png' />
             </ItemHouse>
           )}
           {tabActive === 'casaC' && (
             <ItemHouse title='Casa C' details={CASAC}>
-              <img src='/galery/1.png' />
-              <img src='/galery/1.png' />
-              <img src='/galery/1.png' />
-              <img src='/galery/1.png' />
+              <img src='/houses/casaC/2.png' />
+              <img src='/houses/casaC/3.png' />
+              <img src='/houses/casaC/4.png' />
             </ItemHouse>
           )}
         </div>
