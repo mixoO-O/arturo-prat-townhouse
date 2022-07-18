@@ -12,6 +12,10 @@
   .car {
     width: 50vw;
     margin: 20px;
+
+    & img {
+      height: 70%;
+    }
   }
 
   .contentText {
