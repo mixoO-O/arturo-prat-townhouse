@@ -15,12 +15,13 @@ export const ItemsMenu: Items[] = [
     link: '#proyecto',
   },
   {
+    text: 'Características',
+    link: '#caracteristicas',
+  },
+
+  {
     text: 'Galería',
     link: '#galeria',
-  },
-  {
-    text: 'Plantas',
-    link: '#plantas',
   },
   {
     text: 'Entorno',
@@ -57,11 +58,12 @@ const Navbar = ({ bodyRef }: iProps) => {
         const navbar: HTMLElement = navbarRef.current as unknown as HTMLElement;
         const sticky = navbar.offsetTop - 35;
         const isMobile = window.innerWidth <= 900;
+        console.log('🚀 ~ isMobile', isMobile);
 
         if (window.pageYOffset >= sticky) {
           setNavbarClass(isMobile ? styles.mobileNavbarFixed : styles.desktopNavbarFixed);
         } else {
-          setNavbarClass(isMobile ? styles.mobileNavbar : styles.desktopNavbar);
+          setNavbarClass(isMobile ? styles.mobileNavbarFixed : styles.desktopNavbar);
         }
       };
 

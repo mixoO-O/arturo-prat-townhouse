@@ -17,33 +17,35 @@ const listItems = [
 
 const Characteristics = () => {
   return (
-    <div className={styles.characteristics}>
-      <div>
-        <Carousel autoplay>
-          <img src='/houses/house_1.jpg' />
-          <img src='/houses/house_2.jpg' />
-          <img src='/houses/house_3.jpg' />
-        </Carousel>
-      </div>
-      <div className={stylesProjects.projectDescription}>
-        <span>Características</span>
-        <h2>Exclusividad y Diseño</h2>
-        <p>
-          Una distribución única de espacios con modernas terminaciones y calidad en cada detalle, con un diseño que
-          permite disfrutar de cada espacio por su funcionalidad y armonía.
-        </p>
-        <br />
-        <p>
-          Enamórate de una terraza única, amplia y cómoda, diseñada para compartir en familia y disfrutar de la vida.
-        </p>
-        <br />
-        <ul>
-          {listItems.map((text, index) => (
-            <li key={index}>
-              <span>+</span> {text}
-            </li>
-          ))}
-        </ul>
+    <div id='caracteristicas'>
+      <div className={styles.characteristics}>
+        <div>
+          <Carousel autoplay>
+            <img src='/houses/house_1.jpg' />
+            <img src='/houses/house_2.jpg' />
+            <img src='/houses/house_3.jpg' />
+          </Carousel>
+        </div>
+        <div className={stylesProjects.projectDescription}>
+          <span>Características</span>
+          <h2>Exclusividad y Diseño</h2>
+          <p>
+            Una distribución única de espacios con modernas terminaciones y calidad en cada detalle, con un diseño que
+            permite disfrutar de cada espacio por su funcionalidad y armonía.
+          </p>
+          <br />
+          <p>
+            Enamórate de una terraza única, amplia y cómoda, diseñada para compartir en familia y disfrutar de la vida.
+          </p>
+          <br />
+          <ul>
+            {listItems.map((text, index) => (
+              <li key={index}>
+                <span>+</span> {text}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

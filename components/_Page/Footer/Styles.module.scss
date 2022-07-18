@@ -37,6 +37,7 @@
     grid-auto-flow: row;
     grid-template-areas: '. . . . .';
     margin: 0px 100px;
+    padding-top: 5rem;
 
     .item {
       display: flex;
@@ -55,6 +56,13 @@
       }
       .details {
         font-size: 1rem;
+        text-align: center;
+      }
+      .detailsLink {
+        font-size: 1rem;
+        text-align: center;
+        color: $primary-dark-color;
+        cursor: pointer;
       }
     }
   }

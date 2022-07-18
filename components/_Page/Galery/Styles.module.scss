@@ -7,13 +7,13 @@
   align-items: center;
   height: auto;
   margin: auto;
-  margin-bottom: 10vh;
-  margin-top: 10vh;
+  padding-bottom: 5rem;
+  padding-top: 10vh;
   width: 100vw;
   max-width: 1200px;
 
   .contentTitle {
-    padding-bottom: 10vh;
+    padding-bottom: 5rem;
     & span {
       color: $primary-dark-color;
       font-size: 2rem;
@@ -42,6 +42,10 @@
           width: 300px;
           object-fit: cover;
           cursor: pointer;
+          :hover {
+            -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+          }
         }
       }
     }
