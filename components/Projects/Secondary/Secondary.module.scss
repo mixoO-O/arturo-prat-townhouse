@@ -68,10 +68,10 @@
       & span {
         margin-right: 10px;
         display: inline-block;
-        color: #555;
+        color: $primary-dark-color;
         font-size: 16px;
 
-        border: solid 1px #555;
+        border: solid 1px $primary-dark-color;
         border-radius: 20px;
 
         min-width: 25px;
@@ -79,7 +79,8 @@
         max-width: 25px;
         max-height: 25px;
 
-        padding-left: 6px;
+        display: flex;
+        justify-content: center;
       }
     }
   }

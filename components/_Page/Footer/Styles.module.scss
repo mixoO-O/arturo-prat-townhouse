@@ -7,14 +7,15 @@
   align-items: center;
   height: auto;
   width: 100vw;
-  max-width: 1200px;
   margin: auto;
   padding-top: 10vh;
   padding-bottom: 10vh;
+  background-color: $title-color;
 
   .title {
     margin-bottom: 1vh;
     & span {
+      color: #fff;
       font-size: 1.3rem;
       font-weight: bold;
     }
@@ -37,6 +38,7 @@
     grid-auto-flow: row;
     grid-template-areas: '. . . . .';
     margin: 0px 100px;
+    padding-top: 5rem;
 
     .item {
       display: flex;
@@ -47,6 +49,7 @@
       .icon {
         font-size: 3rem;
         margin: 5px;
+        color: #fff;
       }
       & span {
         color: $primary-dark-color;
@@ -55,6 +58,14 @@
       }
       .details {
         font-size: 1rem;
+        text-align: center;
+        color: #fff;
+      }
+      .detailsLink {
+        font-size: 1rem;
+        text-align: center;
+        color: $primary-dark-color;
+        cursor: pointer;
       }
     }
   }
@@ -62,6 +73,7 @@
 
 @media screen and (max-width: $tablet-size) {
   .Footer {
+    border-radius: 50px 50px 0px 0px;
     .contentItems {
       display: block;
       margin: 0px 10px;

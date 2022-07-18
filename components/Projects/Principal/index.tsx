@@ -5,7 +5,7 @@ const Principal = () => {
   return (
     <div className={styles.principalProject}>
       <div className={styles.projectImage}>
-        <img src='/dummies/img1.jpg' />
+        <img src='/galery/3.png' />
       </div>
       <div className={styles.projectDescription}>
         <span>Townhouse Arturo Prat</span>

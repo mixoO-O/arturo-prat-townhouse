@@ -11,14 +11,33 @@ interface IItem {
   icon: JSX.Element;
   title: string;
   details: string;
+  openLink?: string;
+  openEmail?: boolean;
 }
 
 const Footer: NextPage = () => {
-  const Item = ({ icon, title, details }: IItem) => (
+  const sendEmail = () => {
+    var email = 'ventas@ideuman.cl';
+    var subject = 'Departamentos';
+    var emailBody = 'Ayuda para cotizar';
+    document.location = 'mailto:' + email + '?subject=' + subject + '&body=' + emailBody;
+  };
+
+  const Item = ({ icon, title, details, openLink, openEmail = false }: IItem) => (
     <div className={styles.item}>
       <div>{icon}</div>
       <span className={styles.title}>{title}</span>
-      <div className={styles.details}>{details}</div>
+      {openLink ? (
+        <div onClick={() => window.open(openLink)} className={styles.detailsLink}>
+          {details}
+        </div>
+      ) : openEmail ? (
+        <div onClick={() => sendEmail()} className={styles.detailsLink}>
+          {details}
+        </div>
+      ) : (
+        <div className={styles.details}>{details}</div>
+      )}
     </div>
   );
 
@@ -34,11 +53,12 @@ const Footer: NextPage = () => {
         <div className={styles.contentItems}>
           <Item
             icon={<LocationIcon className={styles.icon} />}
+            openLink='https://www.google.com/maps/place/Arturo+Prat+1497,+Santiago,+8361556,+Regi%C3%B3n+Metropolitana/@-33.4636825,-70.6533874,15.07z/data=!4m5!3m4!1s0x9662c5156a358c49:0x826cc57a38277297!8m2!3d-33.4657344!4d-70.6471692'
             title='Dirección'
             details='Arturo Prat N° 1497 Santiago'
           />
 
-          <Item icon={<EmailIcon className={styles.icon} />} title='Email' details='Ventas@ideuman.cl' />
+          <Item icon={<EmailIcon className={styles.icon} />} openEmail title='Email' details='Ventas@ideuman.cl' />
 
           <Item
             icon={<PeoplesIcon className={styles.icon} />}
@@ -46,9 +66,19 @@ const Footer: NextPage = () => {
             details='lun a Vie 09:00 a 19:00, sáb a dom 11:00 a 18:00'
           />
 
-          <Item icon={<PhoneIcon className={styles.icon} />} title='Teléfono' details='+569 3260 6098' />
+          <Item
+            icon={<PhoneIcon className={styles.icon} />}
+            openLink='https://api.whatsapp.com/send?phone=56932606098'
+            title='Teléfono'
+            details='+569 3260 6098'
+          />
 
-          <Item icon={<AdminIcon className={styles.icon} />} title='Adquitecto' details='@Cristianirarrazaval' />
+          <Item
+            icon={<AdminIcon className={styles.icon} />}
+            openLink='https://www.instagram.com/Cristianirarrazaval/'
+            title='Adquitecto'
+            details='@Cristianirarrazaval'
+          />
         </div>
       </div>
     </div>

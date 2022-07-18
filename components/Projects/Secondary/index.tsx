@@ -5,7 +5,7 @@ const Secondary = () => {
   return (
     <div className={styles.secondaryProject}>
       <div className={styles.projectImage}>
-        <img src='/dummies/img2.jpg' />
+        <img src='/galery/2.png' />
       </div>
       <div className={styles.projectDescription}>
         <span>Comodidad</span>

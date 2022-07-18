@@ -27,7 +27,9 @@ const HeaderImage = () => (
 
       <div className={styles.headerReservation}>
         <div>
-          <span>RESERVA AHORA</span>
+          <span>
+            <a href='#contacto'>RESERVA AHORA</a>
+          </span>
         </div>
       </div>
     </div>
