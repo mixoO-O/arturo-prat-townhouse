@@ -1,7 +1,6 @@
 import type { NextPage } from 'next';
 import { useState } from 'react';
 import { Carousel, Nav } from 'rsuite';
-import { useModal } from '../../context/modal/modal.provider';
 
 import styles from './Styles.module.scss';
 
@@ -49,7 +48,7 @@ const Homes: NextPage = () => {
           <h2>Tu espacio para soñar</h2>
         </div>
         <div>
-          <Nav appearance='subtle' onSelect={setTabActive}>
+          <Nav appearance='subtle' onSelect={setTabActive} activeKey={tabActive}>
             <Nav.Item eventKey='casaA'>Casa A</Nav.Item>
             <Nav.Item eventKey='casaB'>Casa B</Nav.Item>
             <Nav.Item eventKey='casaC'>Casa C</Nav.Item>
