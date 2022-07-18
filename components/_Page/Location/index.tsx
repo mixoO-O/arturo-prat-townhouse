@@ -7,9 +7,6 @@ const Location: NextPage = () => {
   return (
     <>
       <div id='entorno'>
-        <div className={styles.title}>
-          <span>ENTORNO</span>
-        </div>
         <div className={styles.content}>
           <div className={styles.contentImg}>
             <Carousel autoplay>
@@ -21,7 +18,8 @@ const Location: NextPage = () => {
             </Carousel>
           </div>
           <div className={styles.contentDetails}>
-            <h3>Nuestro Barrio</h3>
+            <span>Entorno</span>
+            <h2>Nuestro Barrio</h2>
             <p>
               Town House Arturo Prat te invita a la experiencia de vivir en medio de un Barrio Patrimonial en Santiago:
               Barrio Matta Sur; Ofrece vida de barrio, alta plusvalía y la posibilidad de estar cerca de todo, lo cual

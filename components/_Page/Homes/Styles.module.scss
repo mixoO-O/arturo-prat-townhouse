@@ -1,0 +1,84 @@
+@import '../../../styles/vars.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin: auto;
+  padding-bottom: 5rem;
+  padding-top: 10vh;
+  width: 100vw;
+  max-width: 1200px;
+
+  .title {
+    padding: 0px 20px;
+    & span {
+      font-size: 1.5rem;
+      color: $primary-dark-color;
+      font-weight: 800;
+    }
+
+    & h2 {
+      font-size: 2.5rem;
+      color: $title-color;
+      font-weight: 400;
+      margin-bottom: 40px;
+    }
+  }
+
+  .imgContent {
+    width: 100%;
+    height: auto;
+
+    .contentHouse {
+      display: flex;
+      width: 100vw;
+      max-width: 1200px;
+
+      .titleHouse {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 30vw;
+        margin: 20px;
+        & span {
+          color: $primary-dark-color;
+          font-size: 20px;
+          display: flex;
+          font-weight: bold;
+        }
+        & p {
+          color: $text-color;
+          font-size: 16px;
+          display: flex;
+          font-weight: 400;
+        }
+      }
+
+      .carousel {
+        width: 70vw;
+        margin: 20px;
+      }
+    }
+  }
+}
+@media screen and (max-width: $tablet-size) {
+  .container {
+    height: auto;
+
+    .imgContent {
+      .contentHouse {
+        flex-direction: column;
+
+        .titleHouse {
+          width: 90%;
+        }
+
+        .carousel {
+          width: 100vw;
+          margin: 0px;
+        }
+      }
+    }
+  }
+}

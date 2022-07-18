@@ -9,6 +9,7 @@ import Footer from '../components/_Page/Footer';
 import HeaderImage from '../components/HeaderImage';
 import Characteristic from '../components/Characteristics';
 import 'rsuite/dist/rsuite.min.css';
+import Homes from '../components/_Page/Homes';
 
 const Navbar = dynamic(() => import('../components/Navbar'), { ssr: false });
 
@@ -35,6 +36,7 @@ const Home: NextPage = () => {
             <Projects />
             <Characteristic />
             <Parallax />
+            <Homes />
             <Galery />
             <Location />
           </div>

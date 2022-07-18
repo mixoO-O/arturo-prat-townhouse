@@ -20,6 +20,10 @@ export const ItemsMenu: Items[] = [
   },
 
   {
+    text: 'Tower House',
+    link: '#tower',
+  },
+  {
     text: 'Galería',
     link: '#galeria',
   },

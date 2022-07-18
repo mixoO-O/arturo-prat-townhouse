@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import './vars.scss';
 
 * {
   padding: 0;
@@ -15,5 +16,13 @@ a {
 }
 
 .rs-carousel-toolbar {
-  background-color: #FFF0 !important;
+  background-color: #fff0 !important;
+}
+
+.rs-carousel-label {
+  background-color: rgba(0, 0, 0, 0.406) !important;
+}
+
+.rs-carousel-label-wrapper input:checked ~ label {
+  background-color: $primary-dark-color !important;
 }

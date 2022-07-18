@@ -37,7 +37,7 @@ const CenterModal: React.FC<IModalProps> = props => {
   const { isOpen, onRequestClose, children, ...modalProps } = props;
 
   return (
-    <Modal open={isOpen} onHide={onRequestClose} style={{ padding: 0 }} {...modalProps}>
+    <Modal open={isOpen} onHide={onRequestClose} style={{ backgroundColor: '#000000ab' }} {...modalProps}>
       <button type='button' onClick={onRequestClose} style={{ ...buttonStyle }}>
         <CloseIcon />
       </button>
