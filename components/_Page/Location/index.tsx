@@ -3,18 +3,61 @@ import { Carousel } from 'rsuite';
 
 import styles from './Styles.module.scss';
 
+interface IItemImg {
+  img: string;
+  txt: string;
+}
+
+const ITEM: IItemImg[] = [
+  {
+    img: '/carrucel/centro.jpg',
+    txt: 'Centro Comunitario de Salud ',
+  },
+  {
+    img: '/carrucel/colegio.jpg',
+    txt: 'Colegios',
+  },
+  {
+    img: '/carrucel/metro.jpg',
+    txt: 'Estación Matta -Línea 3',
+  },
+  {
+    img: '/carrucel/parque.jpg',
+    txt: 'Parque O´Higgins ',
+  },
+  {
+    img: '/carrucel/parque2.jpg',
+    txt: 'Parque O´Higgins ',
+  },
+  {
+    img: '/carrucel/parque3.jpg',
+    txt: 'Parque O´Higgins ',
+  },
+  {
+    img: '/carrucel/universidad.jpg',
+    txt: 'Universidades ',
+  },
+];
 const Location: NextPage = () => {
   return (
     <>
       <div id='entorno'>
         <div className={styles.content}>
           <div className={styles.contentImg}>
-            <Carousel autoplay>
-              <img src='/location/matta.png' />
-              <img src='/galery/3.png' />
-              <img src='/location/parque.jpeg' />
-              <img src='/galery/4.png' />
-              <img src='/location/parque2.jpeg' />
+            <Carousel autoplay as='div'>
+              {ITEM.map((item, index) => (
+                <div
+                  key={index}
+                  className={styles.divImg}
+                  style={{
+                    backgroundImage: `url(${item.img})`,
+                  }}
+                >
+                  <div>
+                    <p>{item.txt}</p>
+                  </div>
+                </div>
+              ))}
             </Carousel>
           </div>
           <div className={styles.contentDetails}>
