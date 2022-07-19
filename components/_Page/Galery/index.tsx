@@ -1,40 +1,9 @@
 import type { NextPage } from 'next';
-import { useState } from 'react';
-import { useModal } from '../../context/modal/modal.provider';
+import ImageItem from '../../ItemImg';
 
 import styles from './Styles.module.scss';
 
 const Galery: NextPage = () => {
-  const { openModal } = useModal();
-  const [tabActive, setTabActive] = useState<string>('');
-
-  const handleImage = (img: string) => {
-    openModal({
-      size: 'lg',
-      modalComponent: (
-        <div
-          style={{
-            margin: -20,
-          }}
-        >
-          <img
-            style={{
-              width: '100%',
-              height: '100%',
-            }}
-            src={img}
-          />
-        </div>
-      ),
-    });
-  };
-
-  const ImageItem = ({ uri }: { uri: string }) => (
-    <div className={styles.contentDiv}>
-      <img onClick={() => handleImage(uri)} src={uri} />
-    </div>
-  );
-
   return (
     <>
       <div id='galeria' className={styles.Title}>
@@ -43,14 +12,14 @@ const Galery: NextPage = () => {
         </div>
         <div className={styles.imgContent}>
           <div className={styles.contentImg}>
-            <ImageItem uri='/galery/1.png' />
-            <ImageItem uri='/galery/2.png' />
-            <ImageItem uri='/galery/3.png' />
+            <ImageItem className={styles.imgClass} uri='/galery/1.png' />
+            <ImageItem className={styles.imgClass} uri='/galery/2.png' />
+            <ImageItem className={styles.imgClass} uri='/galery/3.png' />
           </div>
           <div className={styles.contentImg}>
-            <ImageItem uri='/galery/4.png' />
-            <ImageItem uri='/galery/5.png' />
-            <ImageItem uri='/galery/6.png' />
+            <ImageItem className={styles.imgClass} uri='/galery/4.png' />
+            <ImageItem className={styles.imgClass} uri='/galery/5.png' />
+            <ImageItem className={styles.imgClass} uri='/galery/6.png' />
           </div>
         </div>
       </div>

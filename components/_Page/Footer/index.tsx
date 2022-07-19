@@ -11,6 +11,7 @@ interface IItem {
   icon: JSX.Element;
   title: string;
   details: string;
+  open?: string;
   openLink?: string;
   openEmail?: boolean;
 }
@@ -23,11 +24,16 @@ const Footer: NextPage = () => {
     document.location = 'mailto:' + email + '?subject=' + subject + '&body=' + emailBody;
   };
 
-  const Item = ({ icon, title, details, openLink, openEmail = false }: IItem) => (
+  const Item = ({ icon, title, details, open, openLink, openEmail = false }: IItem) => (
     <div className={styles.item}>
       <div>{icon}</div>
       <span className={styles.title}>{title}</span>
-      {openLink ? (
+
+      {open ? (
+        <div onClick={() => (window.location.href = open)} className={styles.detailsLink}>
+          {details}
+        </div>
+      ) : openLink ? (
         <div onClick={() => window.open(openLink)} className={styles.detailsLink}>
           {details}
         </div>
@@ -61,14 +67,8 @@ const Footer: NextPage = () => {
           <Item icon={<EmailIcon className={styles.icon} />} openEmail title='Email' details='Ventas@ideuman.cl' />
 
           <Item
-            icon={<PeoplesIcon className={styles.icon} />}
-            title='Asesoría en línea'
-            details='lun a Vie 09:00 a 19:00, sáb a dom 11:00 a 18:00'
-          />
-
-          <Item
             icon={<PhoneIcon className={styles.icon} />}
-            openLink='https://api.whatsapp.com/send?phone=56932606098'
+            open='tel:56932606098'
             title='Teléfono'
             details='+569 3260 6098'
           />
