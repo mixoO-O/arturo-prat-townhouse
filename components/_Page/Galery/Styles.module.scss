@@ -33,20 +33,9 @@
 
       margin-bottom: 3vh;
 
-      .contentDiv {
-        height: auto;
+      .imgClass {
+        height: 170px;
         width: 300px;
-
-        & img {
-          height: 200px;
-          width: 300px;
-          object-fit: cover;
-          cursor: pointer;
-          :hover {
-            -webkit-transform: scale(1.3);
-            transform: scale(1.3);
-          }
-        }
       }
     }
   }
@@ -61,14 +50,9 @@
         margin-bottom: 0vh;
         padding-bottom: 0vh;
 
-        .contentDiv {
-          height: auto;
+        .imgClass {
+          height: 170px;
           width: 100%;
-
-          & img {
-            width: 100%;
-            margin: 5% 0%;
-          }
         }
       }
     }

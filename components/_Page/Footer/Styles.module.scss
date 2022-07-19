@@ -15,7 +15,7 @@
   .title {
     margin-bottom: 1vh;
     & span {
-      color: #fff;
+      color: $white;
       font-size: 1.3rem;
       font-weight: bold;
     }
@@ -32,11 +32,11 @@
 
   .contentItems {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
-    grid-template-areas: '. . . . .';
+    grid-template-areas: '.  . . .';
     margin: 0px 100px;
     padding-top: 5rem;
 
@@ -49,7 +49,7 @@
       .icon {
         font-size: 3rem;
         margin: 5px;
-        color: #fff;
+        color: $white;
       }
       & span {
         color: $primary-dark-color;
@@ -59,7 +59,7 @@
       .details {
         font-size: 1rem;
         text-align: center;
-        color: #fff;
+        color: $white;
       }
       .detailsLink {
         font-size: 1rem;

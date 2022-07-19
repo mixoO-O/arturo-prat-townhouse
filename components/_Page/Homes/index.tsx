@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import { useState } from 'react';
 import { Carousel, Nav } from 'rsuite';
+import ItemImg from '../../ItemImg';
 
 import styles from './Styles.module.scss';
 
@@ -20,7 +21,7 @@ const CASAC = ['2 dormitorios', '2 baños – terraza 4to piso', 'Superficie tot
 interface IItemHouse {
   title: string;
   details: string[];
-  children: JSX.Element | JSX.Element[];
+  children: JSX.Element;
 }
 
 const Homes: NextPage = () => {
@@ -34,9 +35,7 @@ const Homes: NextPage = () => {
           <p key={item}>{item}</p>
         ))}
       </div>
-      <div className={styles.carousel}>
-        <Carousel shape='bar'>{children}</Carousel>
-      </div>
+      <div className={styles.carousel}>{children}</div>
     </div>
   );
 
@@ -44,11 +43,11 @@ const Homes: NextPage = () => {
     <>
       <div id='tower' className={styles.container}>
         <div className={styles.title}>
-          <span>Tower House</span>
+          <span>Townhouse</span>
           <h2>Tu espacio para soñar</h2>
         </div>
         <div>
-          <Nav appearance='subtle' onSelect={setTabActive} activeKey={tabActive}>
+          <Nav appearance='subtle' justified onSelect={setTabActive} activeKey={tabActive}>
             <Nav.Item eventKey='casaA'>Casa A</Nav.Item>
             <Nav.Item eventKey='casaB'>Casa B</Nav.Item>
             <Nav.Item eventKey='casaC'>Casa C</Nav.Item>
@@ -57,24 +56,17 @@ const Homes: NextPage = () => {
         <div className={styles.imgContent}>
           {tabActive === 'casaA' && (
             <ItemHouse title='Casa A' details={CASAA}>
-              <img src='/houses/casaA/1.png' />
-              <img src='/houses/casaA/2.png' />
-              <img src='/houses/casaA/3.png' />
-              <img src='/houses/casaA/4.png' />
+              <ItemImg uri='/houses/TIPOLOGIA_A.png' />
             </ItemHouse>
           )}
           {tabActive === 'casaB' && (
             <ItemHouse title='Casa B' details={CASAB}>
-              <img src='/houses/casaB/2.png' />
-              <img src='/houses/casaB/3.png' />
-              <img src='/houses/casaB/4.png' />
+              <ItemImg uri='/houses/TIPOLOGIA_B.png' />
             </ItemHouse>
           )}
           {tabActive === 'casaC' && (
             <ItemHouse title='Casa C' details={CASAC}>
-              <img src='/houses/casaC/2.png' />
-              <img src='/houses/casaC/3.png' />
-              <img src='/houses/casaC/4.png' />
+              <ItemImg uri='/houses/TIPOLOGIA_C.png' />
             </ItemHouse>
           )}
         </div>

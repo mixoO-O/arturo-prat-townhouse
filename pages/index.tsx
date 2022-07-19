@@ -7,9 +7,11 @@ import Galery from '../components/_Page/Galery';
 import Location from '../components/_Page/Location';
 import Footer from '../components/_Page/Footer';
 import HeaderImage from '../components/HeaderImage';
-import Characteristic from '../components/Characteristics';
+import Characteristic from '../components/_Page/Characteristics';
 import 'rsuite/dist/rsuite.min.css';
 import Homes from '../components/_Page/Homes';
+import Proyect from '../components/_Page/Proyect';
+import ProyectTwo from '../components/_Page/ProyectTwo';
 
 const Navbar = dynamic(() => import('../components/Navbar'), { ssr: false });
 
@@ -33,7 +35,8 @@ const Home: NextPage = () => {
               maxWidth: 1200,
             }}
           >
-            <Projects />
+            <Proyect />
+            <ProyectTwo />
             <Characteristic />
             <Parallax />
             <Homes />
