@@ -2,7 +2,6 @@ import { useRef } from 'react';
 import type { NextPage } from 'next';
 import dynamic from 'next/dynamic';
 import Parallax from '../components/Parallax';
-import Projects from '../components/Projects';
 import Galery from '../components/_Page/Galery';
 import Location from '../components/_Page/Location';
 import Footer from '../components/_Page/Footer';
