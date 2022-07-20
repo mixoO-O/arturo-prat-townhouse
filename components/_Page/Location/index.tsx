@@ -64,14 +64,14 @@ const Location: NextPage = () => {
             <span>Entorno</span>
             <h2>Nuestro Barrio</h2>
             <p>
-              Town House Arturo Prat te invita a la experiencia de vivir en medio de un Barrio Patrimonial en Santiago:
+              Townhouse Arturo Prat te invita a la experiencia de vivir en medio de un Barrio Patrimonial en Santiago:
               Barrio Matta Sur; Ofrece vida de barrio, alta plusvalía y la posibilidad de estar cerca de todo, lo cual
               permite un equilibrio entre familia, trabajo, deporte y tiempo libre.
             </p>
             <br />
             <p>
               Cuenta con una conexión privilegiada a transporte público, línea 3 del metro de Santiago, ciclovías,
-              servicios locales, supermercados, comercio, educación, parques y un rápido acceso a Autopista Central.
+              servicios, supermercados, comercio, educación, parques y un rápido acceso a Autopista Central.
             </p>
             <br />
           </div>

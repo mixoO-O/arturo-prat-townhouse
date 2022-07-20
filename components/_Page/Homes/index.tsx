@@ -10,13 +10,14 @@ type house = 'casaA' | 'casaB' | 'casaC';
 const CASAA = [
   '2 dormitorios',
   '3er dormitorio o home office',
-  '3 baños – terraza 4to piso',
-  'Superficie total.: 105m2',
+  '3 baños',
+  'Terraza 4to piso',
+  'Superficie total: 105 ㎡',
 ];
 
-const CASAB = ['2 dormitorios', '2 baños – terraza 4to piso', 'Superficie total.: 97m2'];
+const CASAB = ['2 dormitorios', '2 baños', 'Terraza 4to piso', 'Superficie total: 97 ㎡'];
 
-const CASAC = ['2 dormitorios', '2 baños – terraza 4to piso', 'Superficie total.: 85m2'];
+const CASAC = ['2 dormitorios', '2 baños', 'Terraza 4to piso', 'Superficie total: 85 ㎡'];
 
 interface IItemHouse {
   title: string;
@@ -44,7 +45,7 @@ const Homes: NextPage = () => {
       <div id='tower' className={styles.container}>
         <div className={styles.title}>
           <span>Townhouse</span>
-          <h2>Tu espacio para soñar</h2>
+          <h2>Espacios soñados</h2>
         </div>
         <div>
           <Nav appearance='tabs' justified onSelect={setTabActive} activeKey={tabActive}>

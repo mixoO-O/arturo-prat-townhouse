@@ -17,8 +17,8 @@ const Menu = () => {
         <img src='/dummies/logo2.png' />
       </div>
       <div className={styles.title}>
-        <h2>TOWNHOUSE</h2>
         <h1>Arturo Prat</h1>
+        <h3>TOWNHOUSE</h3>
       </div>
       <div>
         <ul>
