@@ -11,6 +11,7 @@ import 'rsuite/dist/rsuite.min.css';
 import Homes from '../components/_Page/Homes';
 import Proyect from '../components/_Page/Proyect';
 import ProyectTwo from '../components/_Page/ProyectTwo';
+import { Divider } from 'rsuite';
 
 const Navbar = dynamic(() => import('../components/Navbar'), { ssr: false });
 
@@ -34,12 +35,16 @@ const Home: NextPage = () => {
               maxWidth: 1200,
             }}
           >
+            <Divider />
             <Proyect />
             <ProyectTwo />
+            <Divider />
             <Characteristic />
             <Parallax />
             <Homes />
+            <Divider />
             <Galery />
+            <Divider />
             <Location />
           </div>
         </div>

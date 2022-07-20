@@ -9,8 +9,9 @@
   width: 100% !important;
   height: 100vh !important;
   background-size: 100% !important;
-  background: url('/galery/1.png') no-repeat;
+  background-repeat: no-repeat;
   background-color: #2b2b2b;
+  transition: 1s;
 
   @media screen and (max-width: $desktop-size) {
     background-size: 140% !important;

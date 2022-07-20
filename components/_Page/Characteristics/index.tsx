@@ -19,11 +19,13 @@ const Characteristics = () => {
     <div id='caracteristicas'>
       <div className={styles.characteristics}>
         <div className={styles.car}>
-          <Carousel autoplay>
+          <Carousel shape='bar' autoplay>
             <img src='/galery/6.png' />
-            <img src='/galery/1.png' />
             <img src='/galery/5.png' />
+            <img src='/galery/3.png' />
+            <img src='/galery/1.png' />
             <img src='/galery/2.png' />
+            <img src='/galery/4.png' />
           </Carousel>
         </div>
         <div className={styles.contentText}>

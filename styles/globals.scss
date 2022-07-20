@@ -42,8 +42,7 @@ a {
   height: 60px;
   bottom: 40px;
   left: 40px;
-  //background-color: 'transparent';
-  color: #fff;
+  color: $white;
   text-align: center;
   font-size: 30px;
   z-index: 100;
@@ -51,4 +50,23 @@ a {
 
   display: flex;
   justify-content: center;
+}
+
+.rs-nav-justified {
+  z-index: 0;
+}
+
+.rs-nav-item-active {
+  color: $primary-dark-color !important;
+}
+
+.rs-nav-subtle .rs-nav-item.rs-nav-item-active:before {
+  background-color: $primary-dark-color !important;
+}
+
+@media screen and (max-width: $tablet-size) {
+  .whatsapp {
+    bottom: 30px;
+    left: 80vw;
+  }
 }

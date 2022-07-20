@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './HeaderImage.module.scss';
 
 const HeaderImage = () => {
+  const [number, setNumber] = useState<number>(1);
+
   const sendEmail = () => {
     var email = 'ventas@ideuman.cl';
     var subject = 'Departamentos';
@@ -9,9 +11,26 @@ const HeaderImage = () => {
     document.location = 'mailto:' + email + '?subject=' + subject + '&body=' + emailBody;
   };
 
+  const handleBackgroundImage = () => {
+    let div = document.getElementById('backgroundImage');
+    if (div) div.style.backgroundImage = `url(/galery/${number}.png)`;
+    setTimeout(() => {
+      if (number < 6) {
+        const n = number + 1;
+        setNumber(n);
+      } else {
+        setNumber(1);
+      }
+    }, 5000);
+  };
+
+  useEffect(() => {
+    handleBackgroundImage();
+  }, [number]);
+
   return (
     <div className={styles.headerWrapper}>
-      <div className={styles.headerBackground}></div>
+      <div className={styles.headerBackground} id='backgroundImage'></div>
       <div className={styles.headerLayout}>
         <div className={styles.headerTitle}>
           <div>

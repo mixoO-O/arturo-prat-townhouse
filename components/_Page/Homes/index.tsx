@@ -47,7 +47,7 @@ const Homes: NextPage = () => {
           <h2>Tu espacio para soñar</h2>
         </div>
         <div>
-          <Nav appearance='subtle' justified onSelect={setTabActive} activeKey={tabActive}>
+          <Nav appearance='tabs' justified onSelect={setTabActive} activeKey={tabActive}>
             <Nav.Item eventKey='casaA'>Casa A</Nav.Item>
             <Nav.Item eventKey='casaB'>Casa B</Nav.Item>
             <Nav.Item eventKey='casaC'>Casa C</Nav.Item>

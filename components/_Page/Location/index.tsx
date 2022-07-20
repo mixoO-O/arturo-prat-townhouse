@@ -44,7 +44,7 @@ const Location: NextPage = () => {
       <div id='entorno'>
         <div className={styles.content}>
           <div className={styles.contentImg}>
-            <Carousel autoplay as='div'>
+            <Carousel autoplay shape='bar' as='div'>
               {ITEM.map((item, index) => (
                 <div
                   key={index}
