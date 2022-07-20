@@ -13,9 +13,9 @@ const Proyect = () => {
           <span>Townhouse Arturo Prat</span>
           <h2>Proyecto único en el sector</h2>
           <p>
-            ownHouse Arturo Prat es un concepto de viviendas que entrega toda la comodidad de una casa y la seguridad de
-            un departamento. El proyecto está formado por 7 departamentos: 3 duplex y 4 triplex, con 2 y 3 dormitorios o
-            home office, 2 baños y 3 baños más terraza en 4to piso.
+            TownHouse Arturo Prat es un concepto de viviendas que entrega toda la comodidad de una casa y la seguridad
+            de un departamento. El proyecto está formado por 7 departamentos: 3 duplex y 4 triplex, con 2 y 3
+            dormitorios o home office, 2 baños y 3 baños más terraza en 4to piso.
           </p>
           <br />
           <p>
