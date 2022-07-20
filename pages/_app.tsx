@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Townhouse Arturo Prat</title>
-        <meta name='description' content='Townhouse Arturo Prat' />
+        <meta name='description' content='Donde se construye tus sueños' />
         <link rel='icon' href={prefix + '/favicon.ico'} />
       </Head>
 
