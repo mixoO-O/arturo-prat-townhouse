@@ -62,7 +62,6 @@ const Navbar = ({ bodyRef }: iProps) => {
         const navbar: HTMLElement = navbarRef.current as unknown as HTMLElement;
         const sticky = navbar.offsetTop - 35;
         const isMobile = window.innerWidth <= 900;
-        console.log('🚀 ~ isMobile', isMobile);
 
         if (window.pageYOffset >= sticky) {
           setNavbarClass(isMobile ? styles.mobileNavbarFixed : styles.desktopNavbarFixed);
