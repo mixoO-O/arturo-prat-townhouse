@@ -130,8 +130,11 @@
   position: sticky;
   margin-top: 0;
   position: fixed;
-  background-color: #fff & ul {
-    background-color: #fff li a {
+  background-color: #FFF;
+
+  & ul {
+    background-color: #FFF;
+    li a {
       color: $title-color;
     }
   }
