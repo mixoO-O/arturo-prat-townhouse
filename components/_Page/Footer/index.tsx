@@ -76,7 +76,7 @@ const Footer: NextPage = () => {
           <Item
             icon={<AdminIcon className={styles.icon} />}
             openLink='https://www.instagram.com/Cristianirarrazaval/'
-            title='Adquitecto'
+            title='Arquitecto'
             details='@Cristianirarrazaval'
           />
         </div>

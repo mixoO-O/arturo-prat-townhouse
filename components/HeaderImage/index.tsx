@@ -35,8 +35,10 @@ const HeaderImage = () => {
         <div className={styles.headerTitle}>
           <div>
             <img src='/dummies/logo2.png' />
-            <h2>TOWNHOUSE</h2>
-            <h1>Arturo Prat</h1>
+            <div>
+              <h1>Arturo Prat</h1>
+              <h3>TOWNHOUSE</h3>
+            </div>
           </div>
         </div>
 
@@ -46,9 +48,41 @@ const HeaderImage = () => {
 
         <div className={styles.headerList}>
           <ul>
-            <li>2 y 3 Dormitorios o home office </li>
-            <li>2 baños y 3 baños</li>
-            <li>Desde 86m2 totales</li>
+            <li>
+              <img
+                width={35}
+                style={{
+                  marginRight: 16,
+                  marginLeft: 6,
+                }}
+                height={35}
+                src={'/houses/cama.svg'}
+              />
+              2 y 3 Dormitorios o home office{' '}
+            </li>
+            <li>
+              {' '}
+              <img
+                width={45}
+                style={{
+                  marginRight: 5,
+                }}
+                height={45}
+                src={'/houses/bano.svg'}
+              />{' '}
+              2 y 3 baños
+            </li>
+            <li>
+              <img
+                width={45}
+                style={{
+                  marginRight: 10,
+                }}
+                height={45}
+                src={'/houses/dimencion.svg'}
+              />
+              Desde 86 ㎡ totales
+            </li>
           </ul>
         </div>
 

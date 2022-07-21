@@ -33,7 +33,13 @@ a {
 }
 
 .rs-carousel-label-wrapper input:checked ~ label {
+  font-size: x-large;
   background-color: $primary-dark-color !important;
+}
+
+.rs-nav-item {
+  color: #000 !important;
+  font-size: x-large;
 }
 
 .whatsapp {

@@ -29,6 +29,7 @@
         color: #000;
         font-weight: bold;
         transition: all ease 0.4s;
+        font-size: medium;
 
         &:hover {
           color: $primary-dark-color;
@@ -49,7 +50,7 @@
       width: 60px;
       height: 60px;
       padding: 5px;
-      background-color: $white;
+      background-color: #fff;
       border-radius: 0 0 5px 5px;
       margin-left: 20px;
     }
@@ -61,7 +62,7 @@
   & div {
     width: 100vw;
     height: 45px;
-    background-color: $white;
+    background-color: #fff;
     text-align: right;
     padding-right: 40px;
 
@@ -111,7 +112,7 @@
       width: 60px;
       height: 60px;
       padding: 5px;
-      background-color: $white;
+      background-color: #fff;
       border-radius: 0 0 5px 5px;
       margin-left: 20px;
     }

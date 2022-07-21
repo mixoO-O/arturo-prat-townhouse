@@ -49,59 +49,70 @@
 }
 
 .headerTitle {
-  grid-area: 1 / 1 / 2 / 3;
   display: flex;
   align-items: flex-end;
   padding: 20px;
 
   & div {
-    display: grid;
-    grid-template-columns: 140px 100%;
-    grid-template-rows: repeat(2, auto);
+    display: flex;
     width: 100%;
     text-shadow: 1px 1px #2b2b2b;
 
+    @media screen and (max-width: $tablet-size) {
+      flex-direction: column;
+    }
+
     & img {
-      grid-area: 1 / 1 / 3 / 2;
-      border: 10px solid $white;
-      border-radius: 5px;
       margin-right: 15px;
-    }
-
-    & h2 {
-      grid-area: 1 / 2 / 2 / 3;
-      font-size: 40px;
-      font-weight: 100;
-      color: $white;
+      border-right-width: 9px;
+      border-right-color: blanchedalmond;
+      border-right: outset;
+      padding-right: 20px;
+      border-width: thick;
+      border-color: #bcbcbc;
 
       @media screen and (max-width: $tablet-size) {
-        font-size: 35px;
-      }
+        margin-right: 0px;
+        border-right-width: 0px;
+        border-right-color: transparent;
+        border-right: none;
+        padding-right: 0px;
+        border-width: none;
+        border-color: transparent;
 
-      @media screen and (max-width: $mobile-size) {
-        font-size: 24px;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-self: center;
       }
     }
 
-    & h1 {
-      grid-area: 2 / 2 / 3 / 3;
-      font-size: 54px;
-      font-weight: 600;
+    & div {
+      display: flex;
       width: 100%;
-      color: $white;
+      flex-direction: column;
 
-      @media screen and (max-width: $tablet-size) {
-        font-size: 48px;
+      & h3 {
+        font-size: 20px !important;
+        font-weight: 400;
+        color: #575757;
+        @media screen and (max-width: $tablet-size) {
+          display: flex;
+          justify-content: center;
+        }
       }
 
-      @media screen and (max-width: $mobile-size) {
-        font-size: 32px;
+      & h1 {
+        font-size: 54px !important;
+        font-weight: 600;
+        width: 100%;
+        color: #575757;
+        @media screen and (max-width: $tablet-size) {
+          display: flex;
+          justify-content: center;
+        }
       }
     }
-  }
-
-  @media screen and (max-width: $mobile-size) {
-    grid-area: 1 / 1 / 2 / 2;
   }
 }
 
@@ -111,11 +122,13 @@
 
   & h2 {
     font-size: 32px;
-    color: $white;
+    color: #575757;
     text-shadow: 1px 1px #2b2b2b;
     font-weight: 400;
     overflow: hidden;
     line-height: 40px;
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff,
+      -1px 1px #fff;
 
     @media screen and (max-width: $tablet-size) {
       font-size: 28px;
@@ -143,12 +156,14 @@
     list-style: none;
 
     & li {
-      color: $white;
+      color: #000;
       font-size: 20px;
       font-weight: 400;
       margin: 0 20px 10px 20px;
       padding-left: 20px;
-      border-left: solid 1px $white;
+      border-left: solid 1px #000;
+      text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff,
+        -1px 1px #fff;
     }
   }
 
@@ -172,7 +187,7 @@
     text-align: center;
     cursor: pointer;
     & p {
-      color: $white;
+      color: #fff;
     }
   }
 
