@@ -5,9 +5,9 @@ const HeaderImage = () => {
   const [number, setNumber] = useState<number>(1);
 
   const sendEmail = () => {
-    var email = 'ventas@ideuman.cl';
-    var subject = 'Departamentos';
-    var emailBody = 'Ayuda para cotizar';
+    const email = 'ventas@ideuman.cl';
+    const subject = 'Proyecto Arturo Prat Townhouse';
+    const emailBody = 'Me interesa el proyecto%0A%0AFavor contactar';
     document.location = 'mailto:' + email + '?subject=' + subject + '&body=' + emailBody;
   };
 
