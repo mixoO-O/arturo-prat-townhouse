@@ -156,6 +156,7 @@
     list-style: none;
 
     & li {
+      overflow: hidden;
       color: #000;
       font-size: 20px;
       font-weight: 400;
@@ -164,6 +165,10 @@
       border-left: solid 1px #000;
       text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff,
         -1px 1px #fff;
+
+        @media screen and (max-width: $mobile-size) {
+          font-size: 16px;
+        }
     }
   }
 
