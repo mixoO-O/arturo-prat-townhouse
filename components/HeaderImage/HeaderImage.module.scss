@@ -151,6 +151,7 @@
   grid-area: 3 / 1 / 4 / 2;
   display: flex;
   align-items: center;
+  overflow: hidden;
 
   & ul {
     list-style: none;
